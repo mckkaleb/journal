@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="scaffolded-by" content="https://github.com/dart-lang/stagehand">
+	<title>Personal Journal</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="tent.min.css">
+	<script defer src="main.dart.js"></script>
+</head>
+<body>
+	<div id="journal-locked">
+		<h1 class="title type-center" style="margin-top: 250px;">This journal has been locked</h1>	
+		<div class="control" style="text-align: center;">
+			<input type="password" class="control__input" id="unlock-pwd" placeholder="Unlock Password" style="margin-left: 43.5%;">
+			<button class="button button--filled" id="unlock">Unlock</button>
+		</div>		
+	</div>
+	<main class="container container--fluid padding-md">
+		<header class="grid">
+			<div class="grid__column grid__column--8">
+				<h4>Personal Journal</h4>
+			</div>
+			<div class="grid__column grid__column--4">
+				<button class="button button--outlined button--tertiary" id="lock">Lock Journal</button>
+				<button class="button button--filled button--secondary" id="new">New Entry</button>
+			</div>
+		</header>
+		<section id="home">
+			<h1 class="title">Your Entries</h1>
+			<div style="height: 30px;"></div>
+			<div id="list">
+				
+			</div>
+			<p class="type-center" id="empty">Your journal is empty</p>
+		</section>
+		<section id="new-entry" class="hidden">
+			<h1 class="title">New Entry</h1>
+			<div style="height: 15px;"></div>
+			<div class="control">
+				<label>Title</label>
+				<input type="text" class="control__input" id="title" placeholder="Title" style="width: 100%;">
+				<label>Entry</label>
+				<textarea id="entry" cols="30" rows="10" class="control__input" style="width: 100%;" placeholder="Start writing here"></textarea>
+				<button class="button button--filled" id="save">Save</button>
+			</div>
+		</section>
+		<section id="view-entry" class="hidden"></section>
+		<section id="lock-journal" class="hidden">
+			<h1 class="title">Lock Journal</h1>
+			<div style="height: 30px;"></div>
+			<div class="control">
+				<span>Set Unlock Password: <input type="password" class="control__input" id="pwd" placeholder="Password" style="width: 300px;"></span>
+				<button class="button button--filled button--tertiary" id="lock-">Lock</button>
+			</div>
+		</section>
+		<div id="placeholder"></div>
+	</main>
+</body>
+</html>
